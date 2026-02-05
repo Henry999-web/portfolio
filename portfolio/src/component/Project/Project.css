@@ -1,0 +1,90 @@
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+ .line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #333 50%, 
+        #333 100%);
+        }
+
+        .line.right{
+            background: linear-gradient(90deg, 
+                #333 0%, 
+                #333 50%, 
+                transparent 100%);
+        }
+        
+.text-container {
+    padding: 0 1rem;
+}
+
+.project-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em; 
+    margin-right: -0.8em; 
+    transition: all 0.5s ease;
+    cursor: default;
+    color: #000000;
+}
+ 
+.p-container:hover .project-text {
+            letter-spacing: 0.6em;
+            opacity: 1;
+            text-shadow: 0 0 15px rgba(129, 129, 129, 0.4);
+        }
+
+ .p-container:hover .line {
+            background-color: rgba(129, 129, 129, 0.4);
+        }
+
+        .project-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-top: 16px;
+            padding: 10px;
+        }
+        .project-image{
+            width: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-image .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .project-content{
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .project-content h3{
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.5s ease;
+            cursor: default;
+            color: #000000;
+        }
+
+        @media (max-width: 768px) {
+            .project-container {
+                flex-direction: column;
+            }
+        }

@@ -1,0 +1,113 @@
+.t-wrapper {
+    background: var(--background);
+    padding: 2rem 0;
+}
+
+.t-container {
+    gap: 2rem;
+}
+
+.t-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.t-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-right: -0.8em;
+    transition: all 0.5s ease;
+    cursor: default;
+    color: #000000;
+}
+
+.t-container:hover .t-text {
+    letter-spacing: 0.6em;
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(129, 129, 129, 0.4);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.testimonial-card {
+    background: linear-gradient(180deg, #1c1c1c 0%, #000000 100%);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: #666;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    line-height: 1;
+    color: #333;
+    font-family: serif;
+}
+
+.testimonial-content {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.author-role {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
