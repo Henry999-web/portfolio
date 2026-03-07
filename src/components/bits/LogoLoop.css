@@ -1,0 +1,91 @@
+.logoloop {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    user-select: none;
+    /* Mask for fade effect on logic edges (only when .logoloop--fade present) */
+}
+
+.logoloop__track {
+    display: flex;
+    flex-shrink: 0;
+    gap: 2rem;
+    /* Gap between logos */
+    padding-right: 2rem;
+    /* Ensure gap at end of list */
+    width: max-content;
+    animation: scroll-infinite var(--duration, 40s) var(--direction, normal) linear infinite;
+    animation-play-state: var(--play-state, running);
+}
+
+.logoloop__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoloop__image {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logoloop__node {
+    font-size: 28px;
+    /* Default size for SVGs/Icons */
+}
+
+.logoloop__link {
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.logoloop__link:hover {
+    opacity: 0.8;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause on hover fallback (kept for non-JS environments) */
+.logoloop--pause-hover:hover .logoloop__track {
+    animation-play-state: paused;
+}
+
+/* Fade mask applied when `fade` prop enabled */
+.logoloop--fade {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Optional scale on hover/focus for links */
+.logoloop--scale .logoloop__link {
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.logoloop--scale .logoloop__link:hover,
+.logoloop--scale .logoloop__link:focus-visible {
+    transform: scale(1.08);
+}
+
+/* Respect reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .logoloop__track {
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+/* Keyboard focus styles */
+.logoloop__link:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 3px;
+}

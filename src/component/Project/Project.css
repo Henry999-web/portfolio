@@ -1,0 +1,56 @@
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #333 50%,
+            #333 100%);
+}
+
+.line.right {
+    background: linear-gradient(90deg,
+            #333 0%,
+            #333 50%,
+            transparent 100%);
+}
+
+.text-container {
+    padding: 0 1rem;
+}
+
+.project-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-right: -0.8em;
+    transition: all 0.5s ease;
+    cursor: default;
+    color: #000000;
+    /* Adjusted to white for dark theme consistency */
+}
+
+.p-container:hover .project-text {
+    letter-spacing: 0.6em;
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(129, 129, 129, 0.4);
+}
+
+.p-container:hover .line {
+    background-color: rgba(129, 129, 129, 0.4);
+}
+
+/* Removed defunct .project-container and .project-image styles that were replaced by Tailwind classes in JSX */
+
+@media (max-width: 768px) {
+    /* Responsive adjustments if needed outside of Tailwind */
+}
