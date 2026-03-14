@@ -2,65 +2,10 @@
     position: relative;
     background: #000;
     color: white;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
-    width: 100%;
 }
 
-.c-bg-shape {
-    position: absolute;
-    width: 24rem;
-    height: 24rem;
-    border-radius: 9999px;
-    filter: blur(120px);
-    pointer-events: none;
-}
-
-.c-bg-indigo {
-    top: -10%;
-    left: -10%;
-    background-color: rgba(79, 70, 229, 0.1);
-}
-
-.c-bg-purple {
-    bottom: -10%;
-    right: -10%;
-    background-color: rgba(147, 51, 234, 0.1);
-}
-
-.c-inner {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.c-container {
     gap: 4rem;
-    position: relative;
-    z-index: 10;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    .c-inner {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .c-inner {
-        flex-direction: row;
-        align-items: flex-start;
-    }
 }
 
 .c-text {
@@ -68,10 +13,9 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    margin-right: -0.8em;
     transition: all 0.5s ease;
     cursor: default;
-    color: #ffffff;
+    color: #000000;
 }
 
 .c-title {
