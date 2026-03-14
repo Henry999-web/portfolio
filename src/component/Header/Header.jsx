@@ -32,6 +32,7 @@ function Header() {
               <li><NavLink to="/">Home</NavLink></li>
               <li><NavLink to='/services'>Services</NavLink></li>
               <li><NavLink to='/about'>About</NavLink></li>
+              <li><NavLink to='/blog'>Blog</NavLink></li>
               <li><NavLink to='/contact'>Contact</NavLink></li>
             </ul>
           </div>
@@ -61,6 +62,7 @@ function Header() {
                   <li><NavLink to="/" onClick={toggleMenu}>Home</NavLink></li>
                   <li><NavLink to='/services' onClick={toggleMenu}>Services</NavLink></li>
                   <li><NavLink to='/about' onClick={toggleMenu}>About</NavLink></li>
+                  <li><NavLink to='/blog' onClick={toggleMenu}>Blog</NavLink></li>
                   <li><NavLink to='/contact' onClick={toggleMenu}>Contact</NavLink></li>
                 </ul>
                 <div className='mobile-buttons'>
