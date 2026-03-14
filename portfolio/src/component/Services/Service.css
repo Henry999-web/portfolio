@@ -1,0 +1,48 @@
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+ .line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #333 50%, 
+        #333 100%);
+        }
+
+        .line.right{
+            background: linear-gradient(90deg, 
+                #333 0%, 
+                #333 50%, 
+                transparent 100%);
+        }
+        
+.text-container {
+    padding: 0 1rem;
+}
+
+.service-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em; 
+    margin-right: -0.8em; 
+    transition: all 0.5s ease;
+    cursor: default;
+    color: #000000;
+}
+ 
+.s-container:hover .service-text {
+            letter-spacing: 0.6em;
+            opacity: 1;
+            text-shadow: 0 0 15px rgba(129, 129, 129, 0.4);
+        }
+
+ .s-container:hover .line {
+            background-color: rgba(129, 129, 129, 0.4);
+        }
