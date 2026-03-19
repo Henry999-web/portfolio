@@ -5,7 +5,6 @@ import Service from "./component/Services/Service"
 import Project from "./component/Project/Project"
 import Testimonials from "./component/Testimonials/Testimonials"
 import Footer from "./component/Footer/Footer"
-import Contact from "./component/Contact/Contact"
 function LandingPage() {
     return (
         <>
@@ -15,7 +14,6 @@ function LandingPage() {
             <Service />
             <Project />
             <Testimonials />
-            <Contact />
             <Footer />
         </>
     )

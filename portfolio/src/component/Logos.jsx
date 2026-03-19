@@ -18,7 +18,7 @@ const imageLogos = [
 
 function Logos() {
   return (
-    <section>
+    <section className="bg-gray-100">
         <div className="innerWidth paddings flexCenter lo-container">
           <div className="logos">
             <LogoLoop

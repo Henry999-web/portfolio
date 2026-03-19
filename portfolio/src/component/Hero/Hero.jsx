@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import './Hero.css'
 const Hero = () => {
     return (
-        <section className="hero-wrapper">
+        <section className="hero-wrapper bg-gray-100">
             <div className='innerWidth paddings flexCenter hero-container'>
                 <div className='hero-left'>
                     <p className='animate-slide-left'>Hi There, I am</p>

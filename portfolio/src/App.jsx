@@ -5,9 +5,9 @@ import BlogPost from './pages/Blog/BlogPost';
 import Dashboard from './pages/Admin/Dashboard';
 import EditPost from './pages/Admin/EditPost';
 import Login from './pages/Admin/Login';
-import ContactPage from './pages/ContactPage/ContactPage';
 import Register from './pages/Admin/Register';
 import ProtectedRoute from './components/ProtectedRoute';
+import Contact from './component/Contact/Contact';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/blog" element={<BlogListing />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
-      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/contact" element={<Contact />} />
 
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />

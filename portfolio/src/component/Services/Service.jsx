@@ -5,7 +5,7 @@ import './Service.css'
 
 function Service() {
     return (
-        <section className='service-wrapper'>
+        <section className='service-wrapper bg-gray-100'>
             <section className="innerWidth relative px-8 py-24 s-container">
                 <div className="text-wrapper">
                     <div className="line"></div>
@@ -16,7 +16,7 @@ function Service() {
                 </div>
                 <div className="mt-16 grid w-full gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {/* Card 1 */}
-                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
+                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-[#18181b] bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
 
                         {/* Icon Container - Matches the sleek rounded style */}
                         <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-100/50 bg-zinc-900 shadow-inner">
@@ -38,7 +38,7 @@ function Service() {
                         <div className="absolute inset-0 -z-10 rounded-2xl bg-white/5 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
                     </div>
                     {/* Card 2 */}
-                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
+                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-[#18181b] bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
 
                         {/* Icon Container - Matches the sleek rounded style */}
                         <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-100/50 bg-zinc-900 shadow-inner">
@@ -60,7 +60,7 @@ function Service() {
                         <div className="absolute inset-0 -z-10 rounded-2xl bg-white/5 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
                     </div>
                     {/* Card 3 */}
-                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
+                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-[#18181b] bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
 
                         {/* Icon Container - Matches the sleek rounded style */}
                         <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-100/50 bg-zinc-900 shadow-inner">
@@ -82,7 +82,7 @@ function Service() {
                         <div className="absolute inset-0 -z-10 rounded-2xl bg-white/5 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
                     </div>
                     {/* Card 4 */}
-                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
+                    <div className="group relative inset-ring-2 inset-ring-background flex h-full w-full max-w-md flex-col rounded-2xl border border-black bg-[#18181b] bg-gradient-to-b from-zinc-900 to-black p-8 transition-all duration-300 hover:border-zinc-700">
 
                         {/* Icon Container - Matches the sleek rounded style */}
                         <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-100/50 bg-zinc-900 shadow-inner">

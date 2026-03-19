@@ -25,7 +25,7 @@ function Testimonials() {
     ];
 
     return (
-        <section className="t-wrapper">
+        <section className="t-wrapper bg-gray-100">
             <div className="innerWidth px-8 py-24 flexCenter p-container t-container flex-col">
                 <div className="text-wrapper w-full flex items-center gap-5 relative">
                     <div className="line flex-grow h-px bg-gradient-to-r from-transparent via-[#333] to-[#333]"></div>

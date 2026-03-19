@@ -25,7 +25,7 @@ import project3 from '../../image/project3.webp'
 
         return (
             
-            <section className="project-wrapper">
+            <section className="project-wrapper bg-gray-100">
             
                 <div className="innerWidth px-8 py-24 flexCenter p-container flex-col">
                     <div className="text-wrapper w-full mb-12">

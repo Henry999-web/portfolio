@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import logo from '../../image/logo.jpg'
-import logo2 from '../../image/logo2.png'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
-import ThemeToggleButton from '../../components/ui/ThemeToggleButton'
 import { Button } from "@/components/ui/button"
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -23,7 +21,9 @@ function Header() {
       <nav className="flexCenter innerWidth px-4 py-2 montserrat-regular h-container">
         <div className='header-content'>
           <div className='logo'>
-            <img src={logo} alt="Logo" />
+            <NavLink to="/">
+              <img src={logo} alt="Logo" />
+            </NavLink>
           </div>
 
           {/* Desktop Menu */}
@@ -39,7 +39,6 @@ function Header() {
 
           <div className='header-buttons desktop-buttons'>
             <Button className='btn' variant='default'>Contact Me</Button>
-            <ThemeToggleButton />
           </div>
 
           {/* Mobile Menu Icon */}
