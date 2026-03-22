@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -66,7 +65,7 @@ function Header() {
                 </ul>
                 <div className='mobile-buttons'>
                   <Button className='btn' variant='default'>Contact Me</Button>
-                  <ThemeToggleButton />
+          
                 </div>
               </motion.div>
             )}
