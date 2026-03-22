@@ -4,6 +4,7 @@
 }
 
 .hero-container {
+    padding-top: 2rem;
     background-color: #121211;
     justify-content: space-between;
     align-items: center;
@@ -189,10 +190,9 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
     .hero-container {
+        padding-top: 5rem;
         flex-direction: column;
         text-align: center;
-        padding-top: 0rem;
-        /* Reduced spacing */
         gap: 3rem;
     }
 
