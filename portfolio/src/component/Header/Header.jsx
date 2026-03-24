@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import logo from '../../image/logo.png'
+import logo from '../../image/logo.webp'
+import logo2 from '../../image/logo2.webp'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
@@ -21,7 +22,8 @@ function Header() {
         <div className='header-content'>
           <div className='logo'>
             <NavLink to="/">
-              <img src={logo} alt="Logo" />
+              <img src={logo2} alt="Logo Desktop" className="logo-desktop" />
+              <img src={logo} alt="Logo Mobile" className="logo-mobile" />
             </NavLink>
           </div>
 

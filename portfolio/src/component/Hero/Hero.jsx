@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../../image/hero.png'
+import heroImage from '../../image/hero.webp'
 import { Button } from '@/components/ui/button'
 import './Hero.css'
 const Hero = () => {
