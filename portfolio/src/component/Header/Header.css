@@ -1,8 +1,29 @@
+.h-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.h-wrapper.scrolled {
+    /* Background becomes transparent so the glassmorphism inner container shows through */
+    background-color: transparent !important;
+}
+
 .h-container {
     background-color: #121212;
     position: relative;
     /* Ensure z-index works if needed */
     z-index: 50;
+    transition: all 0.3s ease;
+}
+
+.h-container.scrolled {
+    background-color: rgba(18, 18, 18, 0.2); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle border to separate from content */
 }
 
 .header-content {

@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, CheckCircle, AlertCircle, Send } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
+import toast from 'react-hot-toast';
 import ServiceCheckbox from './ServiceCheckbox';
 import './ContactForm.css';
 
@@ -23,8 +24,6 @@ const SERVICE_OPTIONS = [
 ];
 
 const ContactForm = () => {
-    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
-
     const {
         register,
         handleSubmit,
@@ -54,7 +53,6 @@ const ContactForm = () => {
     };
 
     const onSubmit = async (data) => {
-        setSubmitStatus(null);
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 2000));
@@ -63,14 +61,11 @@ const ContactForm = () => {
             // To plug in Getform, use:
             // await axios.post("YOUR_GETFORM_ENDPOINT", data);
 
-            setSubmitStatus('success');
+            toast.success('Message sent successfully! I will get back to you within 2 hours.');
             reset();
-
-            // Clear success message after 5 seconds
-            setTimeout(() => setSubmitStatus(null), 5000);
         } catch (error) {
             console.error('Submission error:', error);
-            setSubmitStatus('error');
+            toast.error('Oops! Something went wrong. Please try again later.');
         }
     };
 
@@ -87,38 +82,6 @@ const ContactForm = () => {
             <h3 className="cf-title">
                 Ready to get started?
             </h3>
-
-            {/* Status Alerts */}
-            <AnimatePresence>
-                {submitStatus === 'success' && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="cf-alert cf-alert-success"
-                    >
-                        <CheckCircle className="cf-alert-icon" size={20} />
-                        <div>
-                            <h4 className="cf-alert-title">Message sent successfully!</h4>
-                            <p className="cf-alert-desc">I will get back to you within 2 hours.</p>
-                        </div>
-                    </motion.div>
-                )}
-                {submitStatus === 'error' && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="cf-alert cf-alert-error"
-                    >
-                        <AlertCircle className="cf-alert-icon" size={20} />
-                        <div>
-                            <h4 className="cf-alert-title">Oops! Something went wrong.</h4>
-                            <p className="cf-alert-desc">Please try again later or reach out directly.</p>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
 
             <form onSubmit={handleSubmit(onSubmit)} className="cf-form">
 

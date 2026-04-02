@@ -13,8 +13,8 @@
 }
 
 .sc-selected {
-    border-color: #4f46e5; /* indigo-600 */
-    background-color: rgba(79, 70, 229, 0.1);
+    border-color: #000000;
+    background-color: rgba(218, 218, 230, 0.1);
 }
 
 .sc-unselected {
@@ -51,7 +51,7 @@
 .sc-checkmark-bg {
     position: absolute;
     inset: 0;
-    background-color: #4f46e5;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,9 +68,9 @@
 }
 
 .sc-label-selected {
-    color: white;
+    color: rgb(8, 8, 8);
 }
 
 .sc-label-unselected {
-    color: #9ca3af; /* gray-400 */
+    color: #9ca3af;
 }

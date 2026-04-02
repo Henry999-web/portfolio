@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from '../../image/logo.webp'
 import logo2 from '../../image/logo2.webp'
 import './Header.css'
@@ -8,6 +8,16 @@ import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -17,8 +27,8 @@ function Header() {
   };
 
   return (
-    <section className="h-wrapper bg-gray-100">
-      <nav className="flexCenter innerWidth px-4 py-2 montserrat-regular h-container">
+    <section className={`h-wrapper ${isScrolled ? 'scrolled' : 'bg-gray-100'}`}>
+      <nav className={`flexCenter innerWidth px-4 py-2 montserrat-regular h-container ${isScrolled ? 'scrolled' : ''}`}>
         <div className='header-content'>
           <div className='logo'>
             <NavLink to="/">

@@ -194,7 +194,7 @@
 
 .cf-submit-btn {
     width: 100%;
-    background-color: #4f46e5;
+    background-color: #1a1a1a;
     color: white;
     font-weight: 600;
     font-family: inherit;
@@ -206,13 +206,13 @@
     justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(21, 21, 22, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
     border: none;
     cursor: pointer;
 }
 
 .cf-submit-btn:hover:not(:disabled) {
-    background-color: #4338ca; /* indigo-700 */
+    background-color: #292828; /* indigo-700 */
 }
 
 .cf-submit-btn:disabled {
